@@ -4,6 +4,7 @@ module.exports = app => {
   const Article = require('../../models/Article')
   const Category = require('../../models/Category')
   const Hero = require('../../models/Hero')
+  const Item = require('../../models/Item')
   //这样有问题 好像要在db.js里面加语句
   // const Category = mongoose.model('Category')
   // const Article = mongoose.model('Article')

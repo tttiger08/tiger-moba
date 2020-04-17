@@ -145,7 +145,7 @@ $type in $spacing-types {
 // button
 .btn {
     border: none;
-    border-radius: 0.1538rem;
+    border-radius: 0.5rem;
     font-size: map-get($font-sizes, 'sm') * $base-font-size;
     padding: 0.2rem 0.6rem;
 

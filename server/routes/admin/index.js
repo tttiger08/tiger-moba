@@ -51,7 +51,8 @@ module.exports = app => {
     //     next()
     // }
     const resourceMiddleware = require('../../middleware/resource')
-    app.use('/admin/api/rest/:resource', authMiddleware(), resourceMiddleware(), router)
+    app.use('/admin/api/rest/:resource',  authMiddleware(), resourceMiddleware(), router)
+    // app.use('/admin/api/rest/:resource',  resourceMiddleware(), router)
 
     const multer = require('multer')
     const upload = multer({

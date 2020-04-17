@@ -27,14 +27,7 @@
                 <span>收起</span>
             </div>
         </div>
-        <!-- end of nav-icons -->
-        <!-- <my-card title="新闻资讯" icon="news">
-      <template>
-        <div>
-          
-        </div>
-      </template>
-    </my-card> -->
+
         <my-list-card title="新闻资讯" icon="news" :categories="newsCats">
             <template #items="{category}">
                 <router-link v-for="(news,i) in category.newsList" :key="i" :to="`/articles/${news._id}`" class="py-2 fs-lg d-flex">
@@ -64,7 +57,10 @@
         </my-list-card>
       <!-- end of hero -->
       准备写精彩视频和图文攻略
+      <my-card title="精彩视频" icon="superhero-"></my-card>
+      <my-card title="图文攻略" icon="article"></my-card>
     </div>
+    
 </template>
 
 <style lang="scss">
@@ -126,7 +122,7 @@
             async fetchHeroCats() {
                 const res = await this.$http.get("heroes/list");
                 this.HeroCats = res.data
-                console.log(res.data)
+                
             }
         },
         created() {
